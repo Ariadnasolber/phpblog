@@ -1,12 +1,35 @@
-<div class="chat-container">
-    <div class="card">
-        <div class="chat-header" id="chat-header">Chat</div>
-        <div class="chat-window" id="chat-body" style="display: none;">
-            <div id="chat-messages" class="message-list"></div>
-            <form id="chat-form" class="chat-input">
-                <input type="text" id="chat-input" class="message-input" placeholder="Type your message here" />
-                <button type="submit" class="send-button">Send</button>
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat Desplegable</title>
+        <link rel="stylesheet" href="public/css/chat.css" />
+        <!-- Archivo de estilos -->
+    </head>
+    <body>
+        <!-- Contenedor del chat -->
+        <div class="chat-container">
+            <div class="card">
+                <div class="chat-header" id="chat-header">Chat</div>
+                <div class="chat-window" id="chat-body" style="display: none">
+                    <ul id="chat-messages" class="message-list"></ul>
+                    <div class="chat-input">
+                        <input
+                            type="text"
+                            id="message-input"
+                            class="message-input"
+                            placeholder="Type your message here"
+                        />
+                        <button id="send-button" class="send-button">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        <script src="public/js/chat.js"></script>
+        <!-- Archivo de JavaScript -->
+        <script src="public/js/chatLoader.js"></script>
+    </body>
+</html>
