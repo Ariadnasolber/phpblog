@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    color: rgb(37, 37, 37);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto auto auto;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    backdrop-filter: blur(100px);
+    position: fixed;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+#cabecera {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    gap: 70px;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    text-decoration: underline #8c52ff95;
+}
+
+.hero {
+    padding-top: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+#imgcabecera {
+    width: 500px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#userlogo {
+    opacity: 0.8;
+    width: 40px;
+}
+footer {
+    height: 40px;
+    background-color: #5c6aaab4;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 100;
+}
+/*__________________BUTTON____________________*/
+.buttondiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: #5c6aaa;
+    border: 3px solid #b0b9e0;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+.btn:hover {
+    color: #ffffff;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b0b9e0;
+    border: 3px solid #b0b9e0;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}

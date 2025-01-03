@@ -1,12 +1,43 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat</title>
-    <script src="/blog/public/js/chat.js" defer></script>
-  </head>
-  <body>
-    <h1>Chat</h1>
-    <div id="messages-container"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="/public/css/chat.css" /> <!-- Enlace al CSS -->
+</head>
+<body>
+  <div class="chat-container">
+    <div class="card">
+      <!-- Cabecera del chat -->
+      <div class="chat-header" id="chat-header">Chat</div>
+
+      <!-- Ventana de mensajes -->
+      <div class="chat-window" id="chat-window" style="display: none;">
+        <ul class="message-list" id="messages-container">
+          <!-- Los mensajes se añadirán dinámicamente aquí -->
+        </ul>
+      </div>
+
+      <!-- Entrada de texto y botón de envío -->
+      <div class="chat-input" id="chat-input-container" style="display: none;">
+        <input type="text" id="chat-input" class="message-input" placeholder="Type your message here" />
+        <button class="send-button" id="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript para alternar el despliegue del chat
+    const chatHeader = document.getElementById('chat-header');
+    const chatWindow = document.getElementById('chat-window');
+    const chatInputContainer = document.getElementById('chat-input-container');
+
+    chatHeader.addEventListener('click', () => {
+      const isVisible = chatWindow.style.display === 'block';
+      chatWindow.style.display = isVisible ? 'none' : 'block';
+      chatInputContainer.style.display = isVisible ? 'none' : 'flex';
+    });
+  </script>
+</body>
 </html>

@@ -38,8 +38,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
 }
 
 .form .input-span {
@@ -53,7 +52,7 @@ h1 {
 .form input[type="password"] {
     border-radius: 0.5rem;
     padding: 1rem 0.75rem;
-    width: 100%;
+    max-width: 300px;
     border: none;
     display: flex;
     align-items: center;
@@ -69,18 +68,16 @@ h1 {
 
 .label {
     align-self: flex-start;
-    color: var(--clr);
+    color: var(--bg-light);
     font-weight: 600;
 }
 
 .form .submit {
     padding: 1rem 0.75rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
+    width: 300px;
     gap: 0.5rem;
     border-radius: 3rem;
-    background-color: var(--bg-dark);
+    background-color: var(--clr);
     color: var(--bg-light);
     border: none;
     cursor: pointer;
@@ -90,7 +87,7 @@ h1 {
 }
 
 .form .submit:hover {
-    background-color: var(--clr);
+    background-color: var(--bg-light);
     color: var(--bg-dark);
 }
 
